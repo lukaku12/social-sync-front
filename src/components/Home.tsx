@@ -36,6 +36,12 @@ const Home = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+             <TextField
+              className="w-full"
+              label="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <Button
             variant="contained"
