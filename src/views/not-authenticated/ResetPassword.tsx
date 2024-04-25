@@ -57,6 +57,7 @@ const ResetPassword = () => {
             label="password"
             type="password"
             id="password"
+            autoFocus
             autoComplete="password"
           />
           <TextField

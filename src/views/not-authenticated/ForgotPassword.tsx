@@ -3,7 +3,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
+import MaterialLink from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -59,6 +60,7 @@ const ForgotPassword = () => {
             label="email"
             type="text"
             id="email"
+            autoFocus
             autoComplete="email"
           />
           <Button
@@ -71,12 +73,9 @@ const ForgotPassword = () => {
           </Button>
           <Grid container>
             <Grid item>
-              <Link
-                href={'/login'}
-                variant="body2"
-              >
-                {'Go back To Sign In'}
-              </Link>
+              <MaterialLink variant="body2">
+                <Link to={'/login'}>{'Go back To Sign In'}</Link>
+              </MaterialLink>
             </Grid>
           </Grid>
         </Box>

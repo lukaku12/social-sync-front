@@ -5,7 +5,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
+import MaterialLink from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -94,20 +95,14 @@ export default function SignIn() {
               item
               xs
             >
-              <Link
-                href={'/forgot-password'}
-                variant="body2"
-              >
-                Forgot password?
-              </Link>
+              <MaterialLink variant="body2">
+                <Link to={'/forgot-password'}>Forgot password?</Link>
+              </MaterialLink>
             </Grid>
             <Grid item>
-              <Link
-                href={'/register'}
-                variant="body2"
-              >
-                {"Don't have an account? Sign Up"}
-              </Link>
+              <MaterialLink variant="body2">
+                <Link to={'/register'}>{"Don't have an account? Sign Up"}</Link>
+              </MaterialLink>
             </Grid>
           </Grid>
         </Box>
