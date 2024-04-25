@@ -1,5 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Home from '@/components/Home.tsx';
+import SignIn from '@/views/not-authenticated/SignIn.tsx';
+import SignUp from '@/views/not-authenticated/SignUp.tsx';
+import ForgotPassword from '@/views/not-authenticated/ForgotPassword.tsx';
+import ResetPassword from '@/views/not-authenticated/ResetPassword.tsx';
 
 export const AppRoutes = () => {
   return (
@@ -8,14 +11,30 @@ export const AppRoutes = () => {
         path="/"
         element={
           <Navigate
-            to="/home"
+            to="/login"
             replace={true}
           />
         }
       />
+
       <Route
-        path="/home"
-        element={<Home />}
+        path="/login"
+        element={<SignIn />}
+      />
+
+      <Route
+        path="/register"
+        element={<SignUp />}
+      />
+
+      <Route
+        path="/forgot-password"
+        element={<ForgotPassword />}
+      />
+
+      <Route
+        path="/reset-password"
+        element={<ResetPassword />}
       />
     </Routes>
   );
